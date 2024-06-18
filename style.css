@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+* {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* header  */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 20px;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 2rem;
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__button {
+  display: none;
+}
+
+.nav__button img {
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.nav__list {
+  display: flex;
+  gap: 35px;
+}
+
+.nav__links {
+  color: var(--Dark-grayish-blue);
+}
+
+.nav__links:hover {
+  color: var(--Soft-red);
+  transition: all 0.2s;
+}
+
+.closebtn {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* hero */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding-bottom: 2rem;
+  margin: 0 20px;
+}
+
+/* main  */
+.sub-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.sub-container h1 {
+  color: var(--Very-dark-blue);
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.sub-container .sub-desc p {
+  color: var(--Dark-grayish-blue);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.sub-container .sub-desc button {
+  background-color: var(--Soft-red);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 0.8375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  color: var(--Off-white);
+  outline: none;
+  margin-top: 2rem;
+}
+
+/* aside  */
+aside {
+  background-color: var(--Very-dark-blue);
+  padding: 2rem 1.5rem;
+}
+
+h2 {
+  color: var(--Soft-orange);
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+h3 {
+  color: var(--Off-white);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+aside article {
+  padding: 1.5rem 0;
+}
+
+aside article:not(:last-child) {
+  border-bottom: 2px solid var(--Dark-grayish-blue);
+}
+
+aside article p {
+  color: var(--Grayish-blue);
+  font-size: 0.9375rem;
+}
+
+/* section  */
+.details span {
+  color: var(--Soft-red);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.details span,
+h4 {
+  margin-bottom: 10px;
+}
+
+section {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+section article {
+  display: flex;
+}
+
+section article img {
+  width: 100px;
+  padding-right: 1rem;
+}
+
+h4 {
+  font-size: 1rem;
+  color: var(--Very-dark-blue);
+}
+
+.details p {
+  color: var(--Dark-grayish-blue);
+}
+
+/* media queries  */
+@media screen and (max-width: 960px) {
+  .sub-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-container h1 {
+    margin-bottom: 1rem;
+  }
+
+  section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__button {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 1;
+  }
+
+  .closebtn {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .nav {
+    position: fixed;
+    height: 100vh;
+    width: 75%;
+    top: 0;
+    right: -100%;
+    transition: right 0.3s ease;
+    z-index: 2;
+    background-color: #fff;
+  }
+
+  .active {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    padding-left: 20px;
+  }
+
+  .nav__links {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    grid-column: span 3;
+    margin-bottom: 15px;
+  }
+
+  aside {
+    grid-column: span 3;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* do active states  */
