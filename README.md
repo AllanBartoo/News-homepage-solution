@@ -4,8 +4,8 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: https://github.com/AllanBartoo/News-homepage-solution
+- Live Site URL: https://allanbartoo.github.io/News-homepage-solution
 
 ## My process
 
