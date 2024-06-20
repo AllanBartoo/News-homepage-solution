@@ -127,14 +127,20 @@ img {
 .sub-container .sub-desc button {
   background-color: var(--Soft-red);
   border: none;
-  padding: 0.75rem 2rem;
+  padding: 0.9rem 2rem;
   font-size: 0.8375rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.2px;
-  color: var(--Off-white);
+  letter-spacing: 3px;
+  color: var(--Very-dark-blue);
   outline: none;
   margin-top: 2rem;
+  cursor: pointer;
+}
+
+.sub-container .sub-desc button:hover {
+  background-color: var(--Very-dark-blue);
+  color: var(--Off-white);
 }
 
 /* aside  */
@@ -153,6 +159,10 @@ h3 {
   color: var(--Off-white);
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+}
+
+h3:hover {
+  color: var(--Soft-orange);
 }
 
 aside article {
@@ -200,6 +210,10 @@ section article img {
 h4 {
   font-size: 1rem;
   color: var(--Very-dark-blue);
+}
+
+h4:hover {
+  color: var(--Soft-red);
 }
 
 .details p {
